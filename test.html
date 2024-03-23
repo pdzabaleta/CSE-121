@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Zabaleta | CSE 121B | BYU-Idaho</title>
-</head>
-<body>
-    <h1>Pablo Zabaleta</h1>
-    <h2>Concepcion, Chile</h2>
-    <hr>
-    
-</body>
-</html>
+with .forEach
+const foodsElement = document.querySelector('#favorite-foods');
+function createandAppendFoodItem(food) {
+  let favoriteFood = document.createElement('li');
+  favoriteFood.textContent = food;
+  foodsElement.appendChild(favoriteFood);
+}
+myInfo.favoriteFoods.forEach(createAndAppendFoodItem);
+}
+
+// with .map
+  const foodsElement = document.querySelector('#favorite-foods');
+  function mapFoodItem(food) {
+    let favoriteFood = document.createElement('li');
+    favoriteFood.textContent = food;
+    return favoriteFood;
+  }
+  // this function could also be written this way using a template literal:
+  function mapFoodItemSmall(food) {
+    return `<li>${food}</li>`;
+  }
+  const foodListElements = myInfo.favoriteFoods.map(mapFoodItem);
+  // we need to flatten the array of strings into one big string. .join does this.
+  foodsElement.innerHTML = foodListElements.join('');

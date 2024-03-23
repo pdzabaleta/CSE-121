@@ -14,18 +14,18 @@ function addNumbers(){
 }
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 /* Function Expression - Subtract Numbers */
-
-function subtract (subtract1, subtract2){
+const subtract = function(subtract1, subtract2) {
     return subtract1 - subtract2;
-
 }
 
-function subtractNumbers (){
+function subtractNumbers() {
     let subtract1 = Number(document.querySelector('#subtract1').value);
     let subtract2 = Number(document.querySelector('#subtract2').value);
     document.querySelector('#difference').value = subtract(subtract1, subtract2);
 }
+
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
+
 /* Arrow Function - Multiply Numbers */
 const multiply = (factor1, factor2) => factor1 * factor2;
 
